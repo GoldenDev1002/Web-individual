@@ -5,7 +5,8 @@
         location: "Hendon",
         price: 1000,
         spaces: 5,
-        img: "subjectPic/english.jpg"
+        img: "subjectPic/english.jpg",
+        icon: "fa fa-arrow-down-a-z"
         
       },
   
@@ -14,7 +15,8 @@
         location: "Leeds",
         price: 2000,
         spaces: 5,
-        img: "subjectPic/history.jpg"
+        img: "subjectPic/history.jpg",
+        icon : "fa fa-scroll"
       },
   
       {  id: 1003,
@@ -22,14 +24,16 @@
         location: "Manchester",
         price: 2500,
         spaces: 5,
-        img: "subjectPic/literature.jpg"
+        img: "subjectPic/literature.jpg",
+        icon: "fa fa-book"
       },
       {id: 1004,
         subject: "Biology",
         location: "Hendon",
         price: 2500,
         spaces: 5,
-        img: "subjectPic/biology.jpg"
+        img: "subjectPic/biology.jpg",
+        icon: "fa fa-seedling"
       },
   
       {
@@ -38,7 +42,8 @@
         location: "Leeds",
         price: 2400,
         spaces: 5,
-        img: "subjectPic/chemistry.jpg"
+        img: "subjectPic/chemistry.jpg",
+        icon: "fa fa-flask-vial"
       },
   
       {
@@ -47,7 +52,8 @@
         location: "Hendon",
         price: 2500,
         spaces: 5,
-        img: "subjectPic/physics.png"
+        img: "subjectPic/physics.png",
+        icon: "fa fa-atom"
       },
   
       {
@@ -56,7 +62,8 @@
         location: "Hendon",
         price: 3000,
         spaces: 5,
-        img: "subjectPic/economics.jpg"
+        img: "subjectPic/economics.jpg",
+        icon: "fa fa-coins"
       },
 
 
@@ -66,7 +73,8 @@
         location: "Leeds",
         price: 3000,
         spaces: 5,
-        img: "subjectPic/chemistry.jpg"
+        img: "subjectPic/chemistry.jpg",
+        icon: "fa fa-flask-vial"
       },
 
       {id: 1009,
@@ -74,7 +82,8 @@
         location: "Hendon",
         price: 2400,
         spaces: 5,
-        img: "subjectPic/biology.jpg"
+        img: "subjectPic/biology.jpg",
+        icon: "fa fa-seedling"
       },
 
       
@@ -83,7 +92,8 @@
         location: "Manchester",
         price: 2500,
         spaces: 5,
-        img: "subjectPic/literature.jpg"
+        img: "subjectPic/literature.jpg",
+        icon: "fa fa-book"
       
       },
   
