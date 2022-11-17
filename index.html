@@ -62,12 +62,12 @@
                                 </div>
                                 <div class="card-body">
 
-                                    <h5 class="card-title"> {{ lesson.subject }}
+                                    <h5 class="card-title">Subject : {{ lesson.subject }}
                                 </div>
-                                <div class="card-text mb-0">{{ lesson.location }}</div>
-                                <div class="card-text mb-0">{{ lesson.price }}</div>
+                                <div class="card-text mb-0"> Location :{{ lesson.location }}</div>
+                                <div class="card-text mb-0"> Price :{{ lesson.price }}</div>
 
-                                <div class="card-text mb-0">{{ lesson.spaces }}</div>
+                                <div class="card-text mb-0">Spaces :{{ lesson.spaces }}</div>
                                 <!---find a way to map, shopping cart vue js functionality-->
                                 <button class="btn btn-warning" v-on:click="addToCart(lesson)"
                                     v-if="canAddToCart(lesson)">Add to
@@ -105,6 +105,7 @@
                                 <option value="ascending">Ascending</option>
                                 <option value="descending">Descending</option>
                             </select>
+
                         </div>
                     </div>
                 </div>
@@ -121,11 +122,11 @@
                         </div>
                         <div class="card-body">
 
-                            <h5 class="card-title"> {{ cartItem.lesson.subject }}
+                            <h5 class="card-title"> Subject: {{ cartItem.lesson.subject }}
                         </div>
-                        <div class="card-text mb-0">{{ cartItem.lesson.location }}</div>
-                        <div class="card-text mb-0">{{ cartItem.lesson.price }}</div>
-                        <div class="card-text mb-0">{{ cartItem.spaces }}</div> /
+                        <div class="card-text mb-0"> Location :{{ cartItem.lesson.location }}</div>
+                        <div class="card-text mb-0"> Price :{{ cartItem.lesson.price }}</div>
+                        <div class="card-text mb-0">Spaces :{{ cartItem.spaces }}</div> /
                         <!---find a way to map, shopping cart vue js functionality-->
                         <button class="btn btn-warning" v-on:click="addToCart(cartItem)">Remove from cart
                             cart</button>
