@@ -82,17 +82,6 @@ filters: {
       },
 
 
-      validations(fields, regex){
-        if(regex.test(fields.value)){
-       fields.className = "valid"
-        }
-        else{
-          fields.className = "invalid"
-        }
-
-      
-      }
-    ,
 
     removeCart(lessonId){
       // find selected lesson in cart
@@ -129,73 +118,55 @@ filters: {
   },
 
     
-  
+names(){
+    let telephone = /^\d{11}$/
+    
+    let strings =  /[a-zA-Z]/g
+    let x = document.getElementById("naming");
+    let y = document.getElementById("numbering");
+    
 
+    
+    if(strings.test(x.value) && telephone.test(y.value)){
+      x.style.backgroundColor = "green";
+      y.style.backgroundColor = "green";
+      x.style.color = "white";
+      y.style.color = "white";
+     
+      alert("Form submitted");
+      console.log("Correct3")
+
+     
+      
+    }
+    else{
+      x.style.backgroundColor = "red";
+      y.style.backgroundColor = "red";
+      x.style.color = "white";
+      y.style.color = "white";
+     
+    }
+
+   
+
+    
+
+  } 
+,
   
       checkBtn(){
 
-        let patterns = {
-          telephone : /^[/d{11}]$/,
-          strings : /^[a-zA-Z]$/ 
-  
-        }
-
-
+       
         
         if(this.nameInput.length != 0 && this.numberInput.length != 0){
           this.message = "Complete"; 
-             document.getElementById("naming").addEventListener("keyup", names);
+           //  document.getElementById("naming").addEventListener("keyup", names);
           
-
-        function names(){
-          let telephone = /^\d{11}$/
-          let tel2 = /^((\+44)|(0)) ?\d{4} ?\d{6}$/
-          let strings =  /[a-zA-Z]/g
-          let x = document.getElementById("naming");
-          let y = document.getElementById("numbering");
-          console.log("Correct")
-
-          
-          if(strings.test(x.value) && tel2.test(y.value)){
-            x.style.backgroundColor = "green";
-            y.style.backgroundColor = "green";
-            x.style.color = "white";
-            y.style.color = "white";
-           
-            alert("Form submitted");
-            console.log("Correct3")
-
-           
-            
-          }
-          else{
-            x.style.backgroundColor = "red";
-            y.style.backgroundColor = "red";
-            x.style.color = "white";
-            y.style.color = "white";
-           
-          }
-
-         /* if(telephone.test(x.value)){
-            console.log("trues")
-          }
-          else if(strings.test(x.value)){
-     console.log("it's a string")
-          }
-
-          if(telephone.test(y.value)){
-            console.log("trues 2")
-          }
-          else if(strings.test(y.value)){
-     console.log("it's a string 2")
-          } */
-
-          
-
-        } 
+        
+      
        
 
-        names()
+        this.names()
           
         }
         else{
@@ -234,70 +205,7 @@ filters: {
   
 
 
-        // second option
-
-       /* if(this.lessons.length > 0){
-          let lessonArray = this.lessons.slice(0);
-
-          if(this.sortFeature === "subject"){
-          function compare(a, b){
-            if(a.subject.toLowerCase() < b.subject.toLowerCase())
-              return -1
-            
-            if(a.subject.toLowerCase() > b.subject.toLowerCase())
-              return 1
-            
-            return 0
-          }
-
-          return lessonArray.sort(compare)
-        }
-
-        else if(this.sortFeature === "price"){
-
-          let lessonArray = this.lessons.slice(0);
-
-          function compare(a, b){
-            return a.price - b.price 
-          }
-
-          return lessonArray.sort(compare)
-            
-         
-        }
-
-
-        else if(this.sortFeature === "location"){
-
-          if(this.lessons.length > 0){
-            let lessonArray = this.lessons.slice(0);
-
-          function compare(a, b){
-            if(a.location.toLowerCase() < b.location.toLowerCase())
-              return -1
-            
-            if(a.location.toLowerCase() > b.location.toLowerCase())
-              return 1
-            
-            return 0
-          }
-
-          return lessonArray.sort(compare)
-
-        }
-      
-        }
-
-
-    
-
-
-
-        
-
-
-        } */
-
+       
 
         if (this.sortOption === "ascending") {
           
