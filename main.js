@@ -30,8 +30,8 @@ let app = new Vue({
         numberInput: "",
         message: "",
         search : "",
-        sortFeature: "",
-        sortOption: "",
+        sortFeature: "subject",
+        sortOption: "ascending",
         ascending : "",
         descending : "",
         cartIcon: "fa fa-cart-shopping"

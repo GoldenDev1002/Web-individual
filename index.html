@@ -59,17 +59,16 @@
             <div class="col-md-6 col-lg-4" v-for="lesson in filteredLessons" :key="lesson.id">
               <div class="card mb-2 cards">
                 <img :src="lesson.img" alt="lesson.subject" class="card-img-top">
-                <div class="card-text mb-0">
+                <div class="card-text mb-0 d-flex justify-content-end">
                   <i v-bind:class="lesson.icon" class="fa-2x"></i>
                 </div>
                 <div class="card-body">
 
-                  <b>Subject:</b> {{ lesson.subject }} <i v-bind:class="lesson.icon" class="fa-2x position"></i>
+                  <b>Subject:</b> {{ lesson.subject }}
+                  <div class="card-text mb-0"> <b>Location :</b>{{ lesson.location }}</div>
+                  <div class="card-text mb-0"> <b>Price :</b>{{ lesson.price }}</div>
+                  <div class="card-text mb-0"> <b>Spaces :</b>{{ lesson.spaces }}</div>
                 </div>
-                <div class="card-text mb-0"> <b>Location :</b>{{ lesson.location }}</div>
-                <div class="card-text mb-0"> <b>Price :</b>{{ lesson.price }}</div>
-
-                <div class="card-text mb-0"> <b>Spaces :</b>{{ lesson.spaces }}</div>
                 <!---find a way to map, shopping cart vue js functionality-->
                 <button type="button" class="btn btn-warning" v-on:click="addToCart(lesson)"
                   v-if="canAddToCart(lesson)">Add to
